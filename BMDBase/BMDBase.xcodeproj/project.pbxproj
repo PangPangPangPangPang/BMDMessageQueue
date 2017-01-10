@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04E115481E25321300A41475 /* BMDBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115461E25321300A41475 /* BMDBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04E1156B1E25337300A41475 /* NSArray+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E1155D1E25337300A41475 /* NSArray+JSON.h */; };
+		04E1156C1E25337300A41475 /* NSArray+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1155E1E25337300A41475 /* NSArray+JSON.m */; };
+		04E1156D1E25337300A41475 /* NSArray+RemoveNSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E1155F1E25337300A41475 /* NSArray+RemoveNSNull.h */; };
+		04E1156E1E25337300A41475 /* NSArray+RemoveNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E115601E25337300A41475 /* NSArray+RemoveNSNull.m */; };
+		04E1156F1E25337300A41475 /* NSData+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115611E25337300A41475 /* NSData+JSON.h */; };
+		04E115701E25337300A41475 /* NSData+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E115621E25337300A41475 /* NSData+JSON.m */; };
+		04E115711E25337300A41475 /* NSDictionary+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115631E25337300A41475 /* NSDictionary+JSON.h */; };
+		04E115721E25337300A41475 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E115641E25337300A41475 /* NSDictionary+JSON.m */; };
+		04E115731E25337300A41475 /* NSDictionary+RemoveNSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115651E25337300A41475 /* NSDictionary+RemoveNSNull.h */; };
+		04E115741E25337300A41475 /* NSDictionary+RemoveNSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E115661E25337300A41475 /* NSDictionary+RemoveNSNull.m */; };
+		04E115751E25337300A41475 /* NSSet+RemoveNSNULL.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115671E25337300A41475 /* NSSet+RemoveNSNULL.h */; };
+		04E115761E25337300A41475 /* NSSet+RemoveNSNULL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E115681E25337300A41475 /* NSSet+RemoveNSNULL.m */; };
+		04E115771E25337300A41475 /* NSString+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115691E25337300A41475 /* NSString+JSON.h */; };
+		04E115781E25337300A41475 /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1156A1E25337300A41475 /* NSString+JSON.m */; };
+		04E1157B1E25338800A41475 /* NSURL+Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115791E25338800A41475 /* NSURL+Utility.h */; };
+		04E1157C1E25338800A41475 /* NSURL+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1157A1E25338800A41475 /* NSURL+Utility.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04E115431E25321300A41475 /* BMDBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMDBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E115461E25321300A41475 /* BMDBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMDBase.h; sourceTree = "<group>"; };
+		04E115471E25321300A41475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E1155D1E25337300A41475 /* NSArray+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+JSON.h"; path = "Source/JSON/NSArray+JSON.h"; sourceTree = "<group>"; };
+		04E1155E1E25337300A41475 /* NSArray+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JSON.m"; path = "Source/JSON/NSArray+JSON.m"; sourceTree = "<group>"; };
+		04E1155F1E25337300A41475 /* NSArray+RemoveNSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+RemoveNSNull.h"; path = "Source/JSON/NSArray+RemoveNSNull.h"; sourceTree = "<group>"; };
+		04E115601E25337300A41475 /* NSArray+RemoveNSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+RemoveNSNull.m"; path = "Source/JSON/NSArray+RemoveNSNull.m"; sourceTree = "<group>"; };
+		04E115611E25337300A41475 /* NSData+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+JSON.h"; path = "Source/JSON/NSData+JSON.h"; sourceTree = "<group>"; };
+		04E115621E25337300A41475 /* NSData+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+JSON.m"; path = "Source/JSON/NSData+JSON.m"; sourceTree = "<group>"; };
+		04E115631E25337300A41475 /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+JSON.h"; path = "Source/JSON/NSDictionary+JSON.h"; sourceTree = "<group>"; };
+		04E115641E25337300A41475 /* NSDictionary+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+JSON.m"; path = "Source/JSON/NSDictionary+JSON.m"; sourceTree = "<group>"; };
+		04E115651E25337300A41475 /* NSDictionary+RemoveNSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+RemoveNSNull.h"; path = "Source/JSON/NSDictionary+RemoveNSNull.h"; sourceTree = "<group>"; };
+		04E115661E25337300A41475 /* NSDictionary+RemoveNSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+RemoveNSNull.m"; path = "Source/JSON/NSDictionary+RemoveNSNull.m"; sourceTree = "<group>"; };
+		04E115671E25337300A41475 /* NSSet+RemoveNSNULL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSSet+RemoveNSNULL.h"; path = "Source/JSON/NSSet+RemoveNSNULL.h"; sourceTree = "<group>"; };
+		04E115681E25337300A41475 /* NSSet+RemoveNSNULL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSSet+RemoveNSNULL.m"; path = "Source/JSON/NSSet+RemoveNSNULL.m"; sourceTree = "<group>"; };
+		04E115691E25337300A41475 /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JSON.h"; path = "Source/JSON/NSString+JSON.h"; sourceTree = "<group>"; };
+		04E1156A1E25337300A41475 /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JSON.m"; path = "Source/JSON/NSString+JSON.m"; sourceTree = "<group>"; };
+		04E115791E25338800A41475 /* NSURL+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Utility.h"; path = "Source/NSURL/NSURL+Utility.h"; sourceTree = "<group>"; };
+		04E1157A1E25338800A41475 /* NSURL+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Utility.m"; path = "Source/NSURL/NSURL+Utility.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04E1153F1E25321300A41475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E115391E25321300A41475 = {
+			isa = PBXGroup;
+			children = (
+				04E115451E25321300A41475 /* BMDBase */,
+				04E115441E25321300A41475 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04E115441E25321300A41475 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04E115431E25321300A41475 /* BMDBase.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04E115451E25321300A41475 /* BMDBase */ = {
+			isa = PBXGroup;
+			children = (
+				04E115591E25335000A41475 /* Source */,
+				04E115461E25321300A41475 /* BMDBase.h */,
+				04E115471E25321300A41475 /* Info.plist */,
+			);
+			path = BMDBase;
+			sourceTree = "<group>";
+		};
+		04E1154E1E25322800A41475 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				04E115791E25338800A41475 /* NSURL+Utility.h */,
+				04E1157A1E25338800A41475 /* NSURL+Utility.m */,
+			);
+			name = URL;
+			sourceTree = "<group>";
+		};
+		04E115591E25335000A41475 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				04E1155A1E25335C00A41475 /* JSON */,
+				04E1154E1E25322800A41475 /* URL */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		04E1155A1E25335C00A41475 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				04E1155D1E25337300A41475 /* NSArray+JSON.h */,
+				04E1155E1E25337300A41475 /* NSArray+JSON.m */,
+				04E1155F1E25337300A41475 /* NSArray+RemoveNSNull.h */,
+				04E115601E25337300A41475 /* NSArray+RemoveNSNull.m */,
+				04E115611E25337300A41475 /* NSData+JSON.h */,
+				04E115621E25337300A41475 /* NSData+JSON.m */,
+				04E115631E25337300A41475 /* NSDictionary+JSON.h */,
+				04E115641E25337300A41475 /* NSDictionary+JSON.m */,
+				04E115651E25337300A41475 /* NSDictionary+RemoveNSNull.h */,
+				04E115661E25337300A41475 /* NSDictionary+RemoveNSNull.m */,
+				04E115671E25337300A41475 /* NSSet+RemoveNSNULL.h */,
+				04E115681E25337300A41475 /* NSSet+RemoveNSNULL.m */,
+				04E115691E25337300A41475 /* NSString+JSON.h */,
+				04E1156A1E25337300A41475 /* NSString+JSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04E115401E25321300A41475 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E1157B1E25338800A41475 /* NSURL+Utility.h in Headers */,
+				04E1156D1E25337300A41475 /* NSArray+RemoveNSNull.h in Headers */,
+				04E115711E25337300A41475 /* NSDictionary+JSON.h in Headers */,
+				04E115771E25337300A41475 /* NSString+JSON.h in Headers */,
+				04E115481E25321300A41475 /* BMDBase.h in Headers */,
+				04E1156B1E25337300A41475 /* NSArray+JSON.h in Headers */,
+				04E1156F1E25337300A41475 /* NSData+JSON.h in Headers */,
+				04E115751E25337300A41475 /* NSSet+RemoveNSNULL.h in Headers */,
+				04E115731E25337300A41475 /* NSDictionary+RemoveNSNull.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		04E115421E25321300A41475 /* BMDBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E1154B1E25321300A41475 /* Build configuration list for PBXNativeTarget "BMDBase" */;
+			buildPhases = (
+				04E1153E1E25321300A41475 /* Sources */,
+				04E1153F1E25321300A41475 /* Frameworks */,
+				04E115401E25321300A41475 /* Headers */,
+				04E115411E25321300A41475 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BMDBase;
+			productName = BMDBase;
+			productReference = 04E115431E25321300A41475 /* BMDBase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04E1153A1E25321300A41475 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Wang,Yefeng";
+				TargetAttributes = {
+					04E115421E25321300A41475 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 04E1153D1E25321300A41475 /* Build configuration list for PBXProject "BMDBase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04E115391E25321300A41475;
+			productRefGroup = 04E115441E25321300A41475 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04E115421E25321300A41475 /* BMDBase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04E115411E25321300A41475 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04E1153E1E25321300A41475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E1156E1E25337300A41475 /* NSArray+RemoveNSNull.m in Sources */,
+				04E115701E25337300A41475 /* NSData+JSON.m in Sources */,
+				04E115781E25337300A41475 /* NSString+JSON.m in Sources */,
+				04E115721E25337300A41475 /* NSDictionary+JSON.m in Sources */,
+				04E115761E25337300A41475 /* NSSet+RemoveNSNULL.m in Sources */,
+				04E1157C1E25338800A41475 /* NSURL+Utility.m in Sources */,
+				04E1156C1E25337300A41475 /* NSArray+JSON.m in Sources */,
+				04E115741E25337300A41475 /* NSDictionary+RemoveNSNull.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		04E115491E25321300A41475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		04E1154A1E25321300A41475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		04E1154C1E25321300A41475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BMDBase/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Baidu.BMDBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		04E1154D1E25321300A41475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BMDBase/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Baidu.BMDBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04E1153D1E25321300A41475 /* Build configuration list for PBXProject "BMDBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E115491E25321300A41475 /* Debug */,
+				04E1154A1E25321300A41475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E1154B1E25321300A41475 /* Build configuration list for PBXNativeTarget "BMDBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E1154C1E25321300A41475 /* Debug */,
+				04E1154D1E25321300A41475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04E1153A1E25321300A41475 /* Project object */;
+}
