@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    BMDMessage *message = [[BMDMessage alloc] initWithActor:@"sleep" args:nil];
+    BMDMessage *message = [[BMDMessage alloc] initWithTask:@"sleep" args:nil];
     [self sendMessage:message callBack:@selector(getSleepCallback:)];
     return YES;
 }

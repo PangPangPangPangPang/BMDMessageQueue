@@ -1,5 +1,5 @@
 //
-//  BMDActor.m
+//  BMDTask.m
 //  MessageQueue
 //
 //  Created by Wang,Yefeng on 10/01/2017.

@@ -1,5 +1,5 @@
 //
-//  BMDActor.h
+//  BMDTask.h
 //  MessageQueue
 //
 //  Created by Wang,Yefeng on 10/01/2017.
@@ -13,15 +13,9 @@
 @interface BMDTask : NSObject
 -(void)processMessage:(BMDMessage *)message;
 
-
-/**
- 
-
- @param message <#message description#>
- @param parentMessage <#parentMessage description#>
- */
 - (void)processCallbackMessage:(BMDMessage *)message
                  parentMessage:(BMDMessage *)parentMessage;
+
 - (void)processCancelMessage:(BMDMessage *)message;
 
 @end

@@ -13,7 +13,7 @@
 
 - (void)processMessage:(BMDMessage *)message {
     [message.dataTable setDictionary:@{@"success": @"xixi"}];
-    BMDMessage *child = [[BMDMessage alloc] initWithActor:@"deeper" args:nil];
+    BMDMessage *child = [[BMDMessage alloc] initWithTask:@"deeper" args:nil];
     [message addChildMessage:child];
     [[BMDMessageQueue getInstance] internalAsyncSendMessage:child];
 }

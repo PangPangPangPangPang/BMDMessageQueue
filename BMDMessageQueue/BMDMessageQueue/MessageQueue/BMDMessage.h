@@ -27,9 +27,9 @@
 
 @property (nonatomic, assign)NSInteger state;
 
-@property (nonatomic, strong)NSString *actor;
+@property (nonatomic, strong)NSString *task;
 
-- (id)initWithActor:(NSString *)actor
+- (id)initWithTask:(NSString *)task
                args:(NSDictionary *)args;
 
 - (void)addChildMessage:(BMDMessage *)message;

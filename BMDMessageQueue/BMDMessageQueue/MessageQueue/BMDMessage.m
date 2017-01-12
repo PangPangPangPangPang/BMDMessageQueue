@@ -10,10 +10,10 @@
 
 @implementation BMDMessage
 
-- (id)initWithActor:(NSString *)actor
+- (id)initWithTask:(NSString *)task
                args:(NSDictionary *)args {
     self = [super initWithHost:Scheme
-                      relative:actor
+                      relative:task
                        command:nil
                           args:args];
     if (self) {
@@ -24,7 +24,7 @@
 
 }
 
-- (NSString *)actor {
+- (NSString *)task {
     return self.relative;
 }
 - (void)addChildMessage:(BMDMessage *)message {
@@ -49,14 +49,15 @@
     if (self.state == state) return;
     if (self.state == BMDMessageFinish
         || self.state == BMDMessageFailed) {
-        for (BMDMessage *child in self.children) {
-            [[BMDMessageQueue getInstance] internalAsyncCancelMessage:child];
-        }
+        if (!self.children.count) return;
+        
+        [[BMDMessageQueue getInstance] internalAsyncCancelMessages:self.children];
         [self cleanChildMessage];
     }
     switch (state) {
         case BMDMessageFinish:
-            if (_originThread) {
+            if (_originThread
+                && _parent) {
                 [self performSelector:@selector(processMessageCallBackOnOriginThread:)
                              onThread:_originThread
                            withObject:self
@@ -66,7 +67,8 @@
             }
             break;
         case BMDMessageFailed:
-            if (_originThread) {
+            if (_originThread
+                && _parent) {
                 [self performSelector:@selector(processMessageCallBackOnOriginThread:)
                              onThread:_originThread
                            withObject:self
