@@ -7,13 +7,21 @@
 //
 
 #import "BMDSleepActor.h"
+#import "BMDDeeperActor.h"
 
 @implementation BMDSleepActor
 
-- (void)processFusionNativeMessage:(BMDMessage *)message {
+- (void)processMessage:(BMDMessage *)message {
     [message.dataTable setDictionary:@{@"success": @"xixi"}];
-    sleep(2);
-    [message setState:BMDMessageFinish];
+    BMDMessage *child = [[BMDMessage alloc] initWithActor:@"deeper" args:nil];
+    [message addChildMessage:child];
+    [[BMDMessageQueue getInstance] internalAsyncSendMessage:child];
 }
+
+- (void)processCallbackMessage:(BMDMessage *)message
+                 parentMessage:(BMDMessage *)parentMessage {
+    [parentMessage removeChildMessage:message];
+}
+
 
 @end

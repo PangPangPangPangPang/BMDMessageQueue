@@ -40,8 +40,14 @@
     return value;
 }
 
+- (void)sendMessage:(BMDMessage *)message {
+    [self sendMessage:message callBack:nil];
+}
+
 - (void)sendMessage:(BMDMessage *)message callBack:(SEL)selector {
-    [[self messageCallbackDic] setObject:@{@"callback":NSStringFromSelector(selector)}
+    NSMutableDictionary *args = [NSMutableDictionary new];
+    [args setValue:NSStringFromSelector(selector) forKey:@"callback"];
+    [[self messageCallbackDic] setObject:args
                                   forKey:[NSValue valueWithPointer:(void*)message]];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -50,6 +56,7 @@
                                                object:message];
     [self.messageArray addObject:message];
     [[BMDMessageQueue getInstance] asyncSendMessage:message];
+    [[NSNotificationCenter defaultCenter] postNotificationName:BMDNotification object:message];
 }
 
 - (void)messageCallBack:(NSNotification *)noti {
@@ -58,20 +65,30 @@
                                                     name:BMDNotification
                                                   object:message];
     NSDictionary *args = [[self messageCallbackDic] objectForKey:[NSValue valueWithPointer:(void *)message]];
+    [self.messageArray removeObject:message];
     if ([args valueForKey:@"callback"]) {
         [self performSelector:NSSelectorFromString([args valueForKey:@"callback"]) withObject:message];
     }else {
         if (message.state == BMDMessageFailed) {
-            [self performSelector:@selector(processMessageSuccess:) withObject:message];
+            if (message.parent) {
+                [self processCallbackMessage:message parentMessage:message.parent];
+            }else {
+                [self processMessageSuccess:message];
+            }
         }else if (message.state == BMDMessageFinish) {
-            [self performSelector:@selector(processMessageFailed:) withObject:message];
+            if (message.parent) {
+                [self processCallbackMessage:message parentMessage:message.parent];
+            }else {
+                [self processMessageFailed:message];
+            }
         }
     }
 }
 
-- (void)processMessageSuccess:(BMDMessage *)message { 
-}
 - (void)processMessageFailed:(BMDMessage *)message {
+    
 }
-
+- (void)processMessageSuccess:(BMDMessage *)message {
+    
+}
 @end

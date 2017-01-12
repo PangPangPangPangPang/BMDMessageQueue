@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
-#import "BMDMessage.h"
+@class BMDMessage;
 
 @interface NSObject (Queue)
+- (void)sendMessage:(BMDMessage *)message;
 - (void)sendMessage:(BMDMessage *)message callBack:(SEL)selector;
+- (void)processMessageSuccess:(BMDMessage *)message;
+- (void)processMessageFailed:(BMDMessage *)message;
+
+- (void)processCallbackMessage:(BMDMessage *)message
+                 parentMessage:(BMDMessage *)parentMessage;
 @end

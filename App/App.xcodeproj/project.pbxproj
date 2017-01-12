@@ -15,6 +15,7 @@
 		04E114681E2522C100A41475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E114661E2522C100A41475 /* LaunchScreen.storyboard */; };
 		04E1150B1E2530A300A41475 /* BMDMessageQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E1150A1E2530A300A41475 /* BMDMessageQueue.framework */; };
 		04E1157F1E25367E00A41475 /* BMDSleepActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1157E1E25367E00A41475 /* BMDSleepActor.m */; };
+		04EA04A11E25C86D00F1A501 /* BMDDeeperActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA04A01E25C86D00F1A501 /* BMDDeeperActor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		04E1150A1E2530A300A41475 /* BMDMessageQueue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BMDMessageQueue.framework; path = "../BMDMessageQueue/build/Debug-iphoneos/BMDMessageQueue.framework"; sourceTree = "<group>"; };
 		04E1157D1E25367E00A41475 /* BMDSleepActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDSleepActor.h; sourceTree = "<group>"; };
 		04E1157E1E25367E00A41475 /* BMDSleepActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDSleepActor.m; sourceTree = "<group>"; };
+		04EA049F1E25C86D00F1A501 /* BMDDeeperActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDDeeperActor.h; sourceTree = "<group>"; };
+		04EA04A01E25C86D00F1A501 /* BMDDeeperActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDDeeperActor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				04E1145F1E2522C100A41475 /* ViewController.m */,
 				04E1157D1E25367E00A41475 /* BMDSleepActor.h */,
 				04E1157E1E25367E00A41475 /* BMDSleepActor.m */,
+				04EA049F1E25C86D00F1A501 /* BMDDeeperActor.h */,
+				04EA04A01E25C86D00F1A501 /* BMDDeeperActor.m */,
 				04E114611E2522C100A41475 /* Main.storyboard */,
 				04E114641E2522C100A41475 /* Assets.xcassets */,
 				04E114661E2522C100A41475 /* LaunchScreen.storyboard */,
@@ -171,6 +176,7 @@
 			files = (
 				04E114601E2522C100A41475 /* ViewController.m in Sources */,
 				04E1145D1E2522C100A41475 /* AppDelegate.m in Sources */,
+				04EA04A11E25C86D00F1A501 /* BMDDeeperActor.m in Sources */,
 				04E1145A1E2522C100A41475 /* main.m in Sources */,
 				04E1157F1E25367E00A41475 /* BMDSleepActor.m in Sources */,
 			);

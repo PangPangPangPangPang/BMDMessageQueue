@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "BMDMessageQueueEx.h"
 #import "BMDBaseMessage.h"
 
 #define BMDMessageOrigin 0
@@ -31,4 +31,8 @@
 
 - (id)initWithActor:(NSString *)actor
                args:(NSDictionary *)args;
+
+- (void)addChildMessage:(BMDMessage *)message;
+- (void)removeChildMessage:(BMDMessage *)message;
+- (void)cleanChildMessage;
 @end

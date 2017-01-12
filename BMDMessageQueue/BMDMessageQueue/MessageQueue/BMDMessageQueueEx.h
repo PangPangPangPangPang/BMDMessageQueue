@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BMDMessage.h"
-#import "BMDActor.h"
+#import "BMDTask.h"
 
+@class BMDMessage;
 @interface BMDMessageQueue : NSObject
 
 @property (nonatomic, strong, readonly)NSOperationQueue *workQueue;
@@ -19,6 +19,13 @@
 
 + (instancetype)getInstance;
 
+- (void)prepareServices:(NSDictionary *)services;
+
 - (void)asyncSendMessage:(BMDMessage *)message;
+- (void)asyncCancelMessage:(BMDMessage *)message;
+
+- (void)internalAsyncSendMessage:(BMDMessage *)message;
+- (void)internalAsyncCallbackMessage:(BMDMessage *)message;
+- (void)internalAsyncCancelMessage:(BMDMessage *)message;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "BMDMessageQueueEx.h"
-
+#import "BMDMessage.h"
 #define Max_Worker_Thread   sysconf(_SC_NPROCESSORS_CONF) * 2
 @implementation BMDMessageQueue
 
@@ -24,7 +24,8 @@ static BMDMessageQueue  *_instance = nil;
     self = [super init];
     if (self) {
         _actorMap = [NSMutableDictionary new];
-        [_actorMap setValue:@"BMDSleepActor" forKey:@"sleep"];
+        [_actorMap setValue:[NSClassFromString(@"BMDSleepActor") new] forKey:@"sleep"];
+        [_actorMap setValue:[NSClassFromString(@"BMDDeeperActor") new] forKey:@"deeper"];
         _workQueue = [NSOperationQueue new];
         [_workQueue setMaxConcurrentOperationCount:Max_Worker_Thread];
         
@@ -35,8 +36,30 @@ static BMDMessageQueue  *_instance = nil;
 - (void)asyncSendMessage:(BMDMessage *)message {
     message.originThread = [NSThread currentThread];
     [_workQueue addOperationWithBlock:^{
-        BMDActor *actor = [NSClassFromString([_actorMap valueForKey:message.actor]) new];
-        [actor processFusionNativeMessage:message];
+        BMDTask *actor = [_actorMap valueForKey:message.actor];
+        [actor processMessage:message];
+    }];
+}
+
+- (void)internalAsyncSendMessage:(BMDMessage *)message {
+
+    [_workQueue addOperationWithBlock:^{
+        BMDTask *actor = [_actorMap valueForKey:message.actor];
+        [actor processMessage:message];
+    }];
+}
+
+- (void)internalAsyncCallbackMessage:(BMDMessage *)message {
+    [_workQueue addOperationWithBlock:^{
+        BMDTask *actor = [_actorMap valueForKey:message.actor];
+        [actor processCallbackMessage:message
+                        parentMessage:message.parent];
+    }];
+}
+- (void)internalAsyncCancelMessage:(BMDMessage *)message {
+    [_workQueue addOperationWithBlock:^{
+        BMDTask *actor = [_actorMap valueForKey:message.actor];
+        
     }];
 }
 
