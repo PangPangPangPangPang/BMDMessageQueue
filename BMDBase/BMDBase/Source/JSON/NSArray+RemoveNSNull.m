@@ -9,7 +9,6 @@
 #import "NSArray+RemoveNSNULL.h"
 #import "NSDictionary+RemoveNSNULL.h"
 #import "NSSet+RemoveNSNULL.h"
-#import "SafeARC.h"
 
 @implementation NSArray (RemoveNSNULL)
 - (NSMutableArray *)RemoveNSNull{
@@ -37,6 +36,6 @@
             }
         }
     }
-    return SafeAutoRelease(array);
+    return array;
 }
 @end

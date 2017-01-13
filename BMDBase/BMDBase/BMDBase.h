@@ -7,6 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <BMDBase/BMDBaseMessage.h>
+#import <BMDBase/NSArray+JSON.h>
+#import <BMDBase/NSArray+RemoveNSNull.h>
+#import <BMDBase/NSData+JSON.h>
+#import <BMDBase/NSDictionary+JSON.h>
+#import <BMDBase/NSDictionary+RemoveNSNull.h>
+#import <BMDBase/NSSet+RemoveNSNull.h>
+#import <BMDBase/NSString+JSON.h>
+#import <BMDBase/NSURL+Utility.h>
 
 //! Project version number for BMDBase.
 FOUNDATION_EXPORT double BMDBaseVersionNumber;

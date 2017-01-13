@@ -7,8 +7,8 @@
 //
 
 #import "NSURL+Utility.h"
+#import "NSDictionary+JSON.h"
 #import "NSArray+JSON.h"
-#improt "NSDIctionary+JSON.h"
 
 @implementation NSURL (Utility)
 + (NSString *)urlEncodedString:(NSString *)sourceText {

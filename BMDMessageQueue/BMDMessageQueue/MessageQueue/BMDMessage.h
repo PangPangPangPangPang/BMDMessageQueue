@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <BMDBase/BMDBase.h>
 #import "BMDMessageQueueEx.h"
-#import "BMDBaseMessage.h"
 
 #define BMDMessageOrigin 0
 #define BMDMessageFinish 1

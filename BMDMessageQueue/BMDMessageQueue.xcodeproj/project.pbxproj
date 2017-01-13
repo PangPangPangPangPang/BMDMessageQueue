@@ -7,35 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CD87411E27507E001A9DF1 /* BMDBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CD87401E27507E001A9DF1 /* BMDBase.framework */; };
+		04CD87481E287185001A9DF1 /* NSObject+Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CD87461E287185001A9DF1 /* NSObject+Queue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04CD87491E287185001A9DF1 /* NSObject+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CD87471E287185001A9DF1 /* NSObject+Queue.m */; };
+		04CD874E1E28726C001A9DF1 /* BMDTaskManageProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CD874D1E28726C001A9DF1 /* BMDTaskManageProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04CD87511E287D86001A9DF1 /* BMDTaskManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CD874F1E287D86001A9DF1 /* BMDTaskManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04CD87521E287D86001A9DF1 /* BMDTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CD87501E287D86001A9DF1 /* BMDTaskManager.m */; };
 		04E114ED1E25303800A41475 /* BMDMessageQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E114EB1E25303800A41475 /* BMDMessageQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E115301E2531EC00A41475 /* BMDTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115271E2531EC00A41475 /* BMDTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E115311E2531EC00A41475 /* BMDTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E115281E2531EC00A41475 /* BMDTask.m */; };
-		04E115321E2531EC00A41475 /* BMDActorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115291E2531EC00A41475 /* BMDActorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04E115331E2531EC00A41475 /* BMDBaseMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E1152A1E2531EC00A41475 /* BMDBaseMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04E115341E2531EC00A41475 /* BMDBaseMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1152B1E2531EC00A41475 /* BMDBaseMessage.m */; };
 		04E115351E2531EC00A41475 /* BMDMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E1152C1E2531EC00A41475 /* BMDMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E115361E2531EC00A41475 /* BMDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1152D1E2531EC00A41475 /* BMDMessage.m */; };
 		04E115371E2531EC00A41475 /* BMDMessageQueueEx.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E1152E1E2531EC00A41475 /* BMDMessageQueueEx.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04E115381E2531EC00A41475 /* BMDMessageQueueEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1152F1E2531EC00A41475 /* BMDMessageQueueEx.m */; };
-		04E115821E253A4A00A41475 /* NSObject+Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E115801E253A4A00A41475 /* NSObject+Queue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04E115831E253A4A00A41475 /* NSObject+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E115811E253A4A00A41475 /* NSObject+Queue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04CD87401E27507E001A9DF1 /* BMDBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BMDBase.framework; path = "../BMDBase/build/Debug-iphoneos/BMDBase.framework"; sourceTree = "<group>"; };
+		04CD87461E287185001A9DF1 /* NSObject+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Queue.h"; path = "MessageQueue/NSObject+Queue.h"; sourceTree = "<group>"; };
+		04CD87471E287185001A9DF1 /* NSObject+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Queue.m"; path = "MessageQueue/NSObject+Queue.m"; sourceTree = "<group>"; };
+		04CD874D1E28726C001A9DF1 /* BMDTaskManageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMDTaskManageProtocol.h; path = MessageQueue/BMDTaskManageProtocol.h; sourceTree = "<group>"; };
+		04CD874F1E287D86001A9DF1 /* BMDTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMDTaskManager.h; sourceTree = "<group>"; };
+		04CD87501E287D86001A9DF1 /* BMDTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMDTaskManager.m; sourceTree = "<group>"; };
 		04E114E81E25303800A41475 /* BMDMessageQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMDMessageQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E114EB1E25303800A41475 /* BMDMessageQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMDMessageQueue.h; sourceTree = "<group>"; };
 		04E114EC1E25303800A41475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E115271E2531EC00A41475 /* BMDTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMDTask.h; path = MessageQueue/BMDTask.h; sourceTree = "<group>"; };
 		04E115281E2531EC00A41475 /* BMDTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMDTask.m; path = MessageQueue/BMDTask.m; sourceTree = "<group>"; };
-		04E115291E2531EC00A41475 /* BMDActorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMDActorProtocol.h; path = MessageQueue/BMDActorProtocol.h; sourceTree = "<group>"; };
-		04E1152A1E2531EC00A41475 /* BMDBaseMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMDBaseMessage.h; path = MessageQueue/BMDBaseMessage.h; sourceTree = "<group>"; };
-		04E1152B1E2531EC00A41475 /* BMDBaseMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMDBaseMessage.m; path = MessageQueue/BMDBaseMessage.m; sourceTree = "<group>"; };
 		04E1152C1E2531EC00A41475 /* BMDMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMDMessage.h; path = MessageQueue/BMDMessage.h; sourceTree = "<group>"; };
 		04E1152D1E2531EC00A41475 /* BMDMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMDMessage.m; path = MessageQueue/BMDMessage.m; sourceTree = "<group>"; };
 		04E1152E1E2531EC00A41475 /* BMDMessageQueueEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMDMessageQueueEx.h; path = MessageQueue/BMDMessageQueueEx.h; sourceTree = "<group>"; };
 		04E1152F1E2531EC00A41475 /* BMDMessageQueueEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMDMessageQueueEx.m; path = MessageQueue/BMDMessageQueueEx.m; sourceTree = "<group>"; };
-		04E115801E253A4A00A41475 /* NSObject+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Queue.h"; sourceTree = "<group>"; };
-		04E115811E253A4A00A41475 /* NSObject+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Queue.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +45,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CD87411E27507E001A9DF1 /* BMDBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04CD873F1E27507D001A9DF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04CD87401E27507E001A9DF1 /* BMDBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04CD874C1E2871B9001A9DF1 /* TaskManager */ = {
+			isa = PBXGroup;
+			children = (
+				04CD874F1E287D86001A9DF1 /* BMDTaskManager.h */,
+				04CD87501E287D86001A9DF1 /* BMDTaskManager.m */,
+			);
+			name = TaskManager;
+			sourceTree = "<group>";
+		};
 		04E114DE1E25303800A41475 = {
 			isa = PBXGroup;
 			children = (
 				04E114EA1E25303800A41475 /* BMDMessageQueue */,
 				04E114E91E25303800A41475 /* Products */,
+				04CD873F1E27507D001A9DF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,17 +99,16 @@
 		04E114F71E25308300A41475 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				04CD874C1E2871B9001A9DF1 /* TaskManager */,
+				04CD87461E287185001A9DF1 /* NSObject+Queue.h */,
+				04CD87471E287185001A9DF1 /* NSObject+Queue.m */,
 				04E115271E2531EC00A41475 /* BMDTask.h */,
 				04E115281E2531EC00A41475 /* BMDTask.m */,
-				04E115291E2531EC00A41475 /* BMDActorProtocol.h */,
-				04E1152A1E2531EC00A41475 /* BMDBaseMessage.h */,
-				04E1152B1E2531EC00A41475 /* BMDBaseMessage.m */,
 				04E1152C1E2531EC00A41475 /* BMDMessage.h */,
 				04E1152D1E2531EC00A41475 /* BMDMessage.m */,
 				04E1152E1E2531EC00A41475 /* BMDMessageQueueEx.h */,
 				04E1152F1E2531EC00A41475 /* BMDMessageQueueEx.m */,
-				04E115801E253A4A00A41475 /* NSObject+Queue.h */,
-				04E115811E253A4A00A41475 /* NSObject+Queue.m */,
+				04CD874D1E28726C001A9DF1 /* BMDTaskManageProtocol.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -100,13 +120,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CD87511E287D86001A9DF1 /* BMDTaskManager.h in Headers */,
+				04CD874E1E28726C001A9DF1 /* BMDTaskManageProtocol.h in Headers */,
+				04CD87481E287185001A9DF1 /* NSObject+Queue.h in Headers */,
 				04E115301E2531EC00A41475 /* BMDTask.h in Headers */,
 				04E115351E2531EC00A41475 /* BMDMessage.h in Headers */,
-				04E115321E2531EC00A41475 /* BMDActorProtocol.h in Headers */,
 				04E114ED1E25303800A41475 /* BMDMessageQueue.h in Headers */,
-				04E115821E253A4A00A41475 /* NSObject+Queue.h in Headers */,
 				04E115371E2531EC00A41475 /* BMDMessageQueueEx.h in Headers */,
-				04E115331E2531EC00A41475 /* BMDBaseMessage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,11 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CD87521E287D86001A9DF1 /* BMDTaskManager.m in Sources */,
 				04E115381E2531EC00A41475 /* BMDMessageQueueEx.m in Sources */,
-				04E115341E2531EC00A41475 /* BMDBaseMessage.m in Sources */,
 				04E115311E2531EC00A41475 /* BMDTask.m in Sources */,
 				04E115361E2531EC00A41475 /* BMDMessage.m in Sources */,
-				04E115831E253A4A00A41475 /* NSObject+Queue.m in Sources */,
+				04CD87491E287185001A9DF1 /* NSObject+Queue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

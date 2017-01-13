@@ -10,7 +10,14 @@
 #import "BMDMessage.h"
 #import "NSObject+Queue.h"
 
-@interface BMDTask : NSObject
+#define BMDTaskWorkQueue 0
+#define BMDTaskMainQueue 1
+
+@interface BMDTask : NSObject 
+
+@property (nonatomic, strong)NSNumber * queueType;
+@property (nonatomic, strong)NSString *str;
+
 -(void)processMessage:(BMDMessage *)message;
 
 - (void)processCallbackMessage:(BMDMessage *)message

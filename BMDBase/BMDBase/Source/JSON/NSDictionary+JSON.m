@@ -7,7 +7,6 @@
 
 #import "NSDictionary+JSON.h"
 #import "NSDictionary+RemoveNSNull.h"
-#import "SafeARC.h"
 
 @implementation NSDictionary (JSON)
 - (NSString *)jsonString {
@@ -19,7 +18,7 @@
         if (error)
             return nil;
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        return SafeAutoRelease(jsonString);
+        return jsonString;
     } else {
         return nil;
     }
@@ -48,13 +47,12 @@
     id obj = [NSJSONSerialization JSONObjectWithData:jsonData
                                              options:0
                                                error:&error];
-    SafeRelease(jsonData);
+    jsonData;
     if (error || !obj || ![obj isKindOfClass:[NSDictionary class]]) {
         return nil;
     }
     
     NSDictionary *result = [obj RemoveNSNull];
-    SafeRelease(obj);
     return result;
 }
 

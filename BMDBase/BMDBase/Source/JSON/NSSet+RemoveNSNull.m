@@ -9,7 +9,6 @@
 #import "NSSet+RemoveNSNULL.h"
 #import "NSDictionary+RemoveNSNULL.h"
 #import "NSArray+RemoveNSNULL.h"
-#import "SafeARC.h"
 
 @implementation NSSet (RemoveNSNULL)
 - (NSMutableSet *)RemoveNSNull{
@@ -37,6 +36,6 @@
             }
         }
     }
-    return SafeAutoRelease(set);
+    return set;
 }
 @end

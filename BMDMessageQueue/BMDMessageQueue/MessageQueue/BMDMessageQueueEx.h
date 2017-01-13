@@ -8,18 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "BMDTask.h"
+#import "BMDTaskManageProtocol.h"
 
 @class BMDMessage;
 @interface BMDMessageQueue : NSObject
 
 @property (nonatomic, strong, readonly)NSOperationQueue *workQueue;
+@property (nonatomic, strong, readonly)NSMutableDictionary<NSNumber *, NSOperationQueue *> *queueMap;
 @property (nonatomic, strong, readonly)NSOperationQueue *coreQueue;
-
-@property (nonatomic, strong)NSMutableDictionary<NSString *, NSString *> *taskMap;
+@property (nonatomic, strong)id<BMDTaskManageProtocol> taskManager;
 
 + (instancetype)getInstance;
 
-- (void)prepareServices:(NSDictionary *)services;
+- (void)prepareWithTaskManager:(id<BMDTaskManageProtocol>)manager;
 
 - (void)asyncSendMessage:(BMDMessage *)message;
 - (void)asyncSendMessages:(NSArray<BMDMessage *> *)messages;

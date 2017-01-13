@@ -10,6 +10,15 @@
 
 @implementation BMDTask
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.queueType = @(0);
+        self.str = @"sdff";
+    }
+    return self;
+}
+
 - (void)processMessage:(BMDMessage *)message {
 }
 

@@ -10,9 +10,9 @@
 
 #import <BMDMessageQueue/BMDMessageQueueEx.h>
 #import <BMDMessageQueue/BMDMessage.h>
-#import <BMDMessageQueue/BMDBaseMessage.h>
 #import <BMDMessageQueue/BMDTask.h>
 #import <BMDMessageQueue/NSObject+Queue.h>
+#import <BMDMessageQueue/BMDTaskManager.h>
 
 //! Project version number for BMDMessageQueue.
 FOUNDATION_EXPORT double BMDMessageQueueVersionNumber;

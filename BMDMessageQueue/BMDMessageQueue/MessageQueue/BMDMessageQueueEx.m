@@ -8,7 +8,9 @@
 
 #import "BMDMessageQueueEx.h"
 #import "BMDMessage.h"
+
 #define Max_Worker_Thread   sysconf(_SC_NPROCESSORS_CONF) * 2
+
 @implementation BMDMessageQueue
 
 static BMDMessageQueue  *_instance = nil;
@@ -23,18 +25,26 @@ static BMDMessageQueue  *_instance = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _taskMap = [NSMutableDictionary new];
-        [_taskMap setValue:[NSClassFromString(@"BMDSleepActor") new] forKey:@"sleep"];
-        [_taskMap setValue:[NSClassFromString(@"BMDDeeperActor") new] forKey:@"deeper"];
         
         _coreQueue = [NSOperationQueue new];
         [_coreQueue setMaxConcurrentOperationCount:1];
         
         _workQueue = [NSOperationQueue new];
         [_workQueue setMaxConcurrentOperationCount:Max_Worker_Thread];
+        _queueMap = [NSMutableDictionary dictionaryWithDictionary:@{
+                      @0 : _workQueue,
+                      @1: [NSOperationQueue mainQueue]
+                      }];
         
     }
     return self;
+}
+
+- (void)prepareWithTaskManager:(id<BMDTaskManageProtocol>)manager {
+    _taskManager = manager;
+    if ([manager respondsToSelector:@selector(generateQueueMap)]) {
+        [_queueMap addEntriesFromDictionary:[manager generateQueueMap]];
+    }
 }
 
 - (void)asyncSendMessage:(BMDMessage *)message {
@@ -74,16 +84,13 @@ static BMDMessageQueue  *_instance = nil;
 }
 
 - (void)internalAsyncCallbackMessage:(BMDMessage *)message {
-    [_workQueue addOperationWithBlock:^{
-        BMDTask *task = [_taskMap valueForKey:message.task];
-        [task processCallbackMessage:message
-                        parentMessage:message.parent];
+    [_coreQueue addOperationWithBlock:^{
+        [self dispatchCallbackMessage:message];
     }];
 }
 - (void)internalAsyncCancelMessage:(BMDMessage *)message {
-    [_workQueue addOperationWithBlock:^{
-        BMDTask *task = [_taskMap valueForKey:message.task];
-        [task processCancelMessage:message];
+    [_coreQueue addOperationWithBlock:^{
+        [self dispatchCancelMessage:message];
     }];
 }
 
@@ -95,26 +102,30 @@ static BMDMessageQueue  *_instance = nil;
 
 #pragma mark - dispatch message
 - (void)dispatchNormalMessage:(BMDMessage *)message {
-    [_workQueue addOperationWithBlock:^{
-        BMDTask *task = [_taskMap valueForKey:message.task];
+    BMDTask *task = [_taskManager fetchTaskWithMessage:message];
+    [[self fetchQueueWithTask:task] addOperationWithBlock:^{
         [task processMessage:message];
     }];
 }
 
 - (void)dispatchCancelMessage:(BMDMessage *)message {
-    [_workQueue addOperationWithBlock:^{
-        BMDTask *task = [_taskMap valueForKey:message.task];
+    BMDTask *task = [_taskManager fetchTaskWithMessage:message];
+    [[self fetchQueueWithTask:task] addOperationWithBlock:^{
         [task processCancelMessage:message];
     }];
     
 }
 
 - (void)dispatchCallbackMessage:(BMDMessage *)message {
-    [_workQueue addOperationWithBlock:^{
-        BMDTask *task = [_taskMap valueForKey:message.task];
+    BMDTask *task = [_taskManager fetchTaskWithMessage:message];
+    [[self fetchQueueWithTask:task] addOperationWithBlock:^{
         [task processCallbackMessage:message
                        parentMessage:message.parent];
     }];
+}
+
+- (NSOperationQueue *)fetchQueueWithTask:(BMDTask *)task {
+    return [_queueMap objectForKey:task.queueType];
 }
 
 @end

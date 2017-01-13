@@ -18,14 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    BMDMessage *message = [[BMDMessage alloc] initWithTask:@"sleep" args:nil];
-    [self sendMessage:message callBack:@selector(getSleepCallback:)];
     return YES;
 }
 
-- (void)getSleepCallback:(BMDMessage *)message {
-    NSLog(@"%@",message.dataTable);
-}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -7,7 +7,6 @@
 
 #import "NSArray+JSON.h"
 #import "NSArray+RemoveNSNull.h"
-#import "SafeARC.h"
 
 @implementation NSArray (JSON)
 - (NSString *)jsonString {
@@ -48,7 +47,6 @@
         return nil;
     }
     NSArray *result = [obj RemoveNSNull];
-    SafeRelease(obj);
     return result;
 }
 
